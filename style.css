@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background: #252839;
+}
+body{
+    background: #252839;
+}
+body h1{
+    text-align: center;
+    margin: 50px auto;
+    color: #fff;
+    cursor: pointer;
+}
+#nameForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputBox{
+    padding: 10px;
+    border: none;
+    transition: 1s;
+    outline: none;
+}
+.inputBox:focus{
+    transform: rotate(7deg);
+    text-transform: uppercase;
+    border-radius: 20px;
+    border: transparent;
+}
+
+.submitBtn{
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: #333;
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    outline: none;
+}
+.submitBtn:hover{
+    transform: rotate(30deg);
+    background: #000;
+    border-radius: 20px;
+}
+
+
+h2{
+    position: relative;
+    font-size: 14vw;
+    color: transparent;
+    -webkit-text-stroke: 0.3vw #383d52;
+    text-transform: uppercase;
+}
+
+h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw transparent;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: textColor 6s linear infinite;
+}
+
+
+@keyframes textColor {
+    0%, 10%, 100%{
+        width: 0%;
+    }
+    90%, 70%{
+        width: 100%;
+        color: #01fe87;
+    }
+}
